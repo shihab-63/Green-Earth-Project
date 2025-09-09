@@ -114,7 +114,7 @@
       <section class="w-11/12 mx-auto grid grid-cols-1 md:grid-cols-12">
         <aside
           id="categories-container"
-          class="col-span-2 pr-5 flex-wrap flex justify-between md:block space-y-1"
+          class="col-span-2 pr-5 text-center md:text-left space-y-1"
         >
           <h1 class="ml-2 mb-3 text-xl font-semibold">Categories</h1>
         </aside>
@@ -125,7 +125,24 @@
           class="col-span-8 mt-3 md:mt-0 grid grid-cols-1 md:grid-cols-3 gap-5"
         ></div>
 
-        <aside class="border border-red-600 col-span-2 h-10"></aside>
+        <aside class="col-span-2 ml-4 p-4 rounded-xl bg-white">
+          <h1
+            class="text-lg text-center font-semibold bg-[#CFF0DC] text-black p-2 rounded-full"
+          >
+            Your Cart
+          </h1>
+          <div id="price-cards-container"></div>
+          <div
+            id="total-price-container"
+            class="flex justify-between hidden pt-2 mt-2 border-t-2 border-[#1f293720]"
+          >
+            <p class="font-semibold">Total :</p>
+            <p>
+              ৳
+              <span id="total-price">0</span>
+            </p>
+          </div>
+        </aside>
       </section>
 
       <!-- About Section -->
