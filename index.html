@@ -78,17 +78,20 @@
 
     <!-- Hero Area -->
     <section class="bg-[#CFF0DC]">
-      <div class="w-12/12 mx-auto flex justify-between items-center">
+      <div class="w-12/12 mx-auto flex justify-between items-center pb-6">
         <div>
-          <img class="" src="./assets/hero-leaf1.png" alt="" />
+          <img class="hidden md:block" src="./assets/hero-leaf1.png" alt="" />
         </div>
 
         <div class="text-center">
-          <h1 class="text-4xl font-bold">Plant a Tree, Grow a Future</h1>
-          <p class="text-[#1F2937] my-4 mb-6">
+          <h1 class="text-2xl mt-8 md:mt-0 md:text-4xl font-bold">
+            Plant a Tree, Grow a Future
+          </h1>
+          <p
+            class="text-[#1F2937] text-sm mx-4 md:mx-0 md:text-lg my-2 md:my-4 mb-6"
+          >
             Join our mission to plant 1 million trees and make the Earth greener
-            for future <br />
-            generations.
+            for future generations.
           </p>
           <button
             class="btn outline-none text-[#15803D] bg-[#FACC15] border-none rounded-3xl"
@@ -98,7 +101,7 @@
         </div>
 
         <div>
-          <img class="" src="./assets/hero-leaf2.png" alt="" />
+          <img class="hidden md:block" src="./assets/hero-leaf2.png" alt="" />
         </div>
       </div>
     </section>
@@ -108,15 +111,16 @@
         Choose Your Trees
       </h1>
       <!-- Main section -->
-      <section class="w-11/12 mx-auto grid grid-cols-12">
-        <aside id="categories-container" class="col-span-2 pr-5 space-y-1">
+      <section class="w-11/12 mx-auto grid grid-cols-1 md:grid-cols-12">
+        <aside id="categories-container" class="col-span-2 pr-5 flex-wrap flex justify-between md:block space-y-1">
           <h1 class="ml-2 mb-3 text-xl font-semibold">Categories</h1>
         </aside>
 
         <!-- Cards -->
-        <div id="card-container" class="col-span-8 grid grid-cols-3 gap-5">
-          
-        </div>
+        <div
+          id="card-container"
+          class="col-span-8 mt-3 md:mt-0 grid grid-cols-1 md:grid-cols-3 gap-5"
+        ></div>
 
         <aside class="border border-red-600 col-span-2 h-10"></aside>
       </section>

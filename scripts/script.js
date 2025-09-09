@@ -11,6 +11,17 @@ const loadAllCategories = () => {
     });
 };
 
+// Display All categoris
+const DisplayAllCategories = (categories) => {
+  categories.forEach((categorie) => {
+    categoriesContainer.innerHTML += `
+        <div class="hover:bg-[#15803D] py-2 cursor-pointer text-[#1F2937] hover:text-white px-3 rounded-lg">
+            <h2>${categorie.category_name}</h2>
+        </div>
+    `;
+  });
+};
+
 // Load 🌴 All Plants
 const loadAllPlants = () => {
   const url = "https://openapi.programming-hero.com/api/plants";
@@ -25,7 +36,7 @@ const loadAllPlants = () => {
 const displayCardContainer = (plants) => {
   plants.forEach(plant => {
     cardContainer.innerHTML += `
-      <div class="card bg-base-100 shadow-sm">
+      <div class="card bg-base-100 hover:shadow-xl transition-all duration-300 shadow-sm">
             <div class="p-5">
               <figure class="h-[186px]">
                 <img
@@ -52,16 +63,7 @@ const displayCardContainer = (plants) => {
   })
 };
 
-// Display All categoris
-const DisplayAllCategories = (categories) => {
-  categories.forEach((categorie) => {
-    categoriesContainer.innerHTML += `
-        <div class="hover:bg-[#15803D] py-2 cursor-pointer text-[#1F2937] hover:text-white px-3 rounded-lg">
-            <h2>${categorie.category_name}</h2>
-        </div>
-    `;
-  });
-};
+
 
 loadAllPlants();
 loadAllCategories();
