@@ -65,5 +65,5 @@ const displayCardContainer = (plants) => {
 
 
 
-loadAllPlants();
+// loadAllPlants();
 loadAllCategories();
