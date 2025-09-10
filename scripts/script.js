@@ -79,4 +79,49 @@ const displayPlantsByCategories = (plants) => {
   });
 };
 
+//! Load All Plans
+const loadAllPlants = () => {
+  const url = "https://openapi.programming-hero.com/api/plants";
+  fetch(url)
+    .then((res) => res.json())
+    .then((data) => {
+      displayAllPlants(data.plants)
+    });
+};
+
+
+// Display All Plants 
+const displayAllPlants = (plants) => {
+  plants.forEach(plant => {
+    cardContainer.innerHTML += `
+      <div class="card bg-base-100 hover:shadow-xl h-[465px] transition-all duration-300 shadow-sm rounded-xl">
+            <div class="p-5">
+              <figure class="h-[186px]">
+                <img
+                  src="${plant.image}"
+                  alt="Shoes"
+                  class="rounded-xl h-full w-full object-cover"
+                />
+              </figure>
+              <div class="">
+                <h2 class="card-title py-3">${plant.name}</h2>
+                <p class="text-[#1F2937] line-clamp-3 mb-4">
+                  ${plant.description}
+                </p>
+                <div class="flex items-center justify-between">
+                  <span class="bg-[#DCFCE7] p-2 rounded-3xl text-[#15803D]">${plant.category}</span>
+                  <h2 class="text-lg font-bold">৳<span>${plant.price}</span></h2>
+                </div>
+
+                <button class="mt-4 add-to-cart-btn w-full bg-[#15803D] text-white py-2 rounded-3xl cursor-pointer">Add to Cart</button>
+              </div>
+            </div>
+          </div>
+    `
+  })
+}
+
+
+
+loadAllPlants();
 loadCategories();
